@@ -13,10 +13,16 @@ block content
         .person__text
           h2 Тренин Илья
           p Личный сайт веб разработчика
-        .socials.person__socials
-          +icon('vk', 'welcome__social')
-
-        .person__btns
+        ul.socials.person__socials
+          
+          each social in ['vk', 'github', 'in']
+            li.social__item
+              a(href='#').socials__link
+                +icon(social, 'welcome__social')
+        ul.person__btns.socials
+          each btn in ['Мои работы', 'Обо мне', 'Блог']
+            li.person__btn 
+              a(href='#').person__link #{btn}
 
       include ../common/footer
   
