@@ -1,0 +1,59 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper
+        include ../common/header
+        .work__triangles
+            .triangle__left
+            .triangle__right
+        .work__header
+            +icon('works-header', 'works-header__icon')
+            .work__page-name
+                h1.marked Мои работы
+        .work__slider
+            .slider__left
+                .left_container
+                    .slide__name.marked
+                        h2 Сайт школы онлайн образования
+                    .slide__desc HTML, CSS, JAVASCRIPT
+                    a(href='#').slide__view-btn
+                        .link__container
+                            +icon('link', 'link__icon')
+                        .link__desc Посмотреть сайт
+                
+            .slider__right
+                .slide__disp
+                    +image('slider/slide-one.png', 'Слайд 1', 'slide__img')
+                .slide__controls
+                    a(href='#').slide__down
+                        +image('slider/slide-four.png', 'Слайд 4', 'slide__img')
+                        +icon('port-arrow-down', 'port-arrow__icon')
+                    a(href='#').slide__up
+                        +image('slider/slide-two.png', 'Слайд 2', 'slide__img')
+                        +icon('port-arrow-up', 'port-arrow__icon')
+        .about__header
+            +icon('about-header', 'about__icon')
+            .about__name.marked
+                h1 Что обо мне говорят
+        .about__content
+            .about__conteiner
+                ul.about__quotes
+                    li.about__quote
+                        .quote__head тут должны быть кавычки
+                            
+                        .quote__text какойто текст
+                        .quote__autor
+                            .author__ava картинка
+                            .author-name__container
+                                .author__name Имя
+                                .author__desc Инженер
+                    li.about__quote
+                        .quote__head
+                        .quote__text
+                        .quote__autor
+                            .author__ava
+                            .author-name__container
+                                .author__name
+                                .author__desc
+                .about__form
+

@@ -1,0 +1,20 @@
+header.header
+    nav.nav-continer
+        ul.socials.socials__header
+          
+          each social in ['vk', 'github', 'in']
+            li.social__item
+              a(href='#').socials__link
+                +icon(social, 'header-nav__social')
+        .nav__hamburger
+            a(href='#').nav__hamburger-socials__link
+                +icon('hamburger', 'humburger__icon')
+    .header__portfolio
+        +icon('portfolio', 'portfolio__icon')
+    .header__person-container
+        .person__pic
+        .person-header__text
+          h1 Тренин Илья
+          p Личный сайт веб разработчика
+    a(href='#').arrow-down
+        +icon('arrow-down', 'arrow-down__icon')

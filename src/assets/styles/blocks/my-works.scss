@@ -1,0 +1,226 @@
+.work__header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.works-header__icon{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: .1;
+    width: 500px;
+}
+.work__page-name{
+    width: 340px;
+    font-family: 'bernier';
+    //color: black;
+    font-size: 30px;
+}
+.work__triangles{
+    content: '';
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.triangle__left{
+    content: '';
+    width: 50%;
+    &::before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 150px;
+        background-image: linear-gradient(to top right, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        top: -150px;
+    }
+}
+.triangle__right{
+    
+    content: '';
+    width: 50%;
+    &::before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 150px;
+        background-image: linear-gradient(to top left, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        top: -150px;
+    }
+}
+.work__slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $slider;
+}
+.slider__left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left_container{
+    width: 420px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.slide__name{
+    font-family: 'bernier';
+    font-size: 30px;
+    width: auto;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.slide__desc{
+    border-bottom: 1px solid $aqua;
+    border-top: 1px solid $aqua;
+    padding: 20px 0;
+    width: 100%;
+    color: $aqua;
+    margin-bottom: 40px;
+}
+.slide__view-btn{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding: 20px 15px;
+    background-color: $aqua;
+    border-radius: 5px;
+}
+.link__container{
+    position: relative;
+    width: 20px;
+    margin-right: 10px;
+}
+.link__icon{
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.link__desc{
+    color: #fff;
+}
+.slider__right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.slide__disp{
+    height: 525px;
+    width: 100%;
+}
+.slide__img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    
+}
+.slide__controls{
+    height: 225px;
+    width: 100%;
+    display: flex;
+    .slide__img{
+        filter: contrast(50%);
+    }
+
+}
+.slide__down{
+    width: 50%;
+    position: relative;
+}
+.slide__up{
+    width: 50%;
+    position: relative;
+   
+}
+.port-arrow__icon{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #ffffff;
+    width: 45px;
+    height: 30px;
+    filter: contrast(100%);
+}
+.about__header{
+    width: 100%;
+    height: 205px;
+    position: relative;
+}
+.about__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    opacity: 0.1;
+}
+.about__name{
+    width: 300px;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'bernier';
+    //color: #000;
+}
+.about__content{
+    width: 100%;
+    background: url('./assets/images/about/about-bg.png') center center / cover no-repeat;
+    
+}
+.about__conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 780px;
+    margin: auto;
+}
+.about__quotes{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+
+}
+.about__quote{
+    width: 50%;
+}
+.quote__head{
+    position: relative;
+    height: 40px;
+}
+.portfolio-header__icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 36px;
+    width: 36px;
+    fill: gray;
+}
+.quote__text{}
+.quote__autor{}
+.author__ava{}
+.author-name__container{}
+.author__name{}

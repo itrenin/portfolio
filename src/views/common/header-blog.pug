@@ -1,0 +1,21 @@
+header.header
+    nav.nav-continer
+        ul.socials.socials__header
+          
+          each social in ['vk', 'github', 'in']
+            li.social__item
+              a(href='#').socials__link
+                +icon(social, 'header-nav__social')
+        .nav__hamburger
+            a(href='#').nav__hamburger-socials__link
+                +icon('hamburger', 'humburger__icon')
+    .header__person-container
+        .person__pic
+        .header-blog__text
+            h1 Блог
+            p Статьи, которые я написал
+            .header-blog__text-bg
+                +icon('blog', 'bg-icon__text')
+    .header-blog__triangles
+        .header-blog__left-triangle
+        .header-blog__right-triangle

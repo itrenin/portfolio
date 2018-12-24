@@ -22,7 +22,7 @@ block content
         ul.person__btns.socials
           each btn in ['Мои работы', 'Обо мне', 'Блог']
             li.person__btn 
-              a(href='#').person__link #{btn}
+              +page(btn)
 
-      include ../common/footer
+      include ../common/footer-welcome
   

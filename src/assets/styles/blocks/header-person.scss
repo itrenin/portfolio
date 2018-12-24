@@ -1,0 +1,76 @@
+
+.header-blog__text{
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 270px;
+    height: 170px;
+    h1{
+        font-family: 'bernier';
+        font-weight: normal;
+        font-size: 45px;
+        letter-spacing: 2px;
+        //display: block;
+        position: relative;
+
+        &::before{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 55px;
+            width: 20px;
+            height: 5px;
+            background-color: #fff;
+            opacity: .2;
+        }
+        &::after{
+            display: block;
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            width: 20px;
+            height: 5px;
+            background-color: #fff;
+            opacity: .2;
+        }
+    }
+}
+.header-blog__text-bg{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.bg-icon__text{
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    fill: white;
+}
+.header-blog__triangles{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 155px;
+}
+.header-blog__left-triangle{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to top right, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+.header-blog__right-triangle{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to top left, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+
+}

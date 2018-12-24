@@ -4,3 +4,13 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin page(pageName)
+  if pageName == 'Блог'
+    a(href='./blog.html').person__link #{pageName}
+  else if pageName == 'Обо мне'
+    a(href='./about.html').person__link #{pageName}
+  else if pageName == 'Мои работы'
+    a(href='./my-works.html').person__link #{pageName}
+  else
+    a(href='#').person__link #{pageName}
