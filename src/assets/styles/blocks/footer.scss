@@ -51,6 +51,9 @@
     }
     &:hover{
         background-color: #fff;
+        .footer-nav__social{
+            fill: $grey-dark;
+        }
     }
 }
 .footer-nav__social{
@@ -61,9 +64,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    &:hover{
-        fill: $grey-dark;
-    }
+    
 }
 .footer__bottom{
     display: flex;
