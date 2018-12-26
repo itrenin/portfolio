@@ -1,0 +1,170 @@
+.about__triangles{
+    content: '';
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.triangle-about__left{
+    content: '';
+    width: 50%;
+    &::before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 150px;
+        background-image: linear-gradient(to top right,  $slider 0%, $slider 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        top: -150px;
+    }
+}
+.triangle-about__right{
+    content: '';
+    width: 50%;
+    &::before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 150px;
+        background-image: linear-gradient(to top left, $about-right 0%, $about-right 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        position: absolute;
+        top: -150px;
+    }
+}
+
+.about-me__content{
+    display: flex;
+    justify-content: space-between;
+    background-color: $about-right;
+    
+    
+}
+.about-me__left{
+    width: 50%;
+    display: flex;
+    background-color: $slider;
+    
+}
+.about-me__right{
+    width: 49%;
+    
+}
+.about-me__header{
+    padding-top: 20px;
+    font-family: 'bernier';
+    font-size: 31px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    
+}
+.about-header__icon{
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .1;
+}
+.about-me__desc{
+    padding-top: 20px;
+    width: 49%;
+    margin-right: 20px;
+}
+.about-me__person-pic{
+    margin-right: 20px;
+    margin-bottom: 45px;
+}
+.about-me__person-header{
+    font-family: 'bernier';
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.person-pic__about{
+    width: 100%;
+}
+.about-me__skills-header{
+    padding-top: 20px;
+    font-family: 'bernier';
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    .centered{
+        display: block;
+        width: 200px;
+    }
+}
+.about-me__skills-text{
+    margin-right: 60px;
+    margin-bottom: 60px;
+}
+.about-me__skills-list{
+    margin-bottom: 70px;
+}
+
+.skills__item{
+    h2{
+        font-size: 25px;
+    }
+    margin-bottom: 40px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    
+}
+.skill__list{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.skill_item{
+    position: relative;
+    display: block;
+    margin-right: 40px;
+    &:last-child{
+        margin-right: 0;
+    }
+    color: $aqua;
+}
+.about-me__map{
+    position: relative;
+    width: 100%;
+}
+.about-me__map-pic{
+    width: 100%;
+}
+.about-me__contacts{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    background-color: rgba(#fff, .8);
+    padding: 35px 20px 0 20px;
+    border-radius: 5px;
+}
+.contacts__header{
+    display: block;
+    text-align: center;
+    font-family: 'bernier';
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.contacts__list{
+    display: flex;
+    flex-direction: column;
+}
+.contacts__item{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+.contact__icon{
+    width: 25px;
+    height: 25px;
+    fill: $aqua;
+    margin-right: 15px;
+}
+.contact__desc{}

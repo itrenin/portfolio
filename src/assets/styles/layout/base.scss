@@ -53,6 +53,7 @@ a {
 .marked{
   display: block;
   position: relative;
+  margin: auto;
   &:before{
     content: '';
     width: 20px;
@@ -73,4 +74,60 @@ a {
     background-color: gray;
     opacity: .5;
   }
+}
+.centered{
+  display: inline;
+  margin: auto;
+  &.marked{
+    &::before{
+        left: -40px;
+    }
+    &::after{
+        right: -40px;
+    }
+  }
+}
+.percentage{
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+  
+}
+.circle{
+  fill: transparent;
+  stroke-width: 15px;
+  stroke: #ccc;
+}
+.circle-under{
+  position: relative;
+}
+.circle-above{
+  stroke: $aqua;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  
+  animation: fill 100s linear infinite;
+  animation-play-state: paused;
+  //animation-delay: -50s;
+}
+
+@keyframes fill{
+  from{
+    stroke-dashoffset: 251;
+  }
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+.circle-inner{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  text-align: center;
+  font-size: 14px;
 }

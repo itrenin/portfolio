@@ -1,9 +1,9 @@
 mixin icon(iconName, iconClass)
   svg(class=`${iconClass}`)
-    use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
+    use(xlink:href=`./assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+  img(src=`./assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin page(pageName)
   if pageName == 'Блог'
@@ -14,3 +14,9 @@ mixin page(pageName)
     a(href='./my-works.html').person__link #{pageName}
   else
     a(href='#').person__link #{pageName}
+
+mixin circle (percent, text)
+  svg(class = 'percentage' viewBox='0 0 100 100' preserveAspectRatio='none')
+    circle(cx='50' cy='50' r='40' class='circle circle-under')
+    circle(cx='50' cy='50' r='40' class='circle circle-above' style=`animation-delay: -${percent}s`)
+  .circle-inner #{text}

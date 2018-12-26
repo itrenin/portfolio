@@ -28,6 +28,11 @@
     &:last-child{
         margin-right: 0;
     }
+    .person__link{
+        &:hover{
+            color: $aqua;
+        }
+    }
 }
 .footer__socal{
     width: 50%;

@@ -36,24 +36,35 @@ block content
             .about__name.marked
                 h1 Что обо мне говорят
         .about__content
-            .about__conteiner
+            .about__container
                 ul.about__quotes
                     li.about__quote
-                        .quote__head тут должны быть кавычки
+                        .quote__head &#61709
                             
-                        .quote__text какойто текст
-                        .quote__autor
-                            .author__ava картинка
+                        .quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .quote__author
+                            .author__ava 
+                                +image ('works/ava1.jpg', 'Аватар автора', 'author__pic')
                             .author-name__container
-                                .author__name Имя
-                                .author__desc Инженер
+                                .author__name Ковальчук Дмитрий
+                                .author__desc основатель Loftschool
                     li.about__quote
-                        .quote__head
-                        .quote__text
-                        .quote__autor
+                        .quote__head &#61709
+                        .quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        .quote__author
                             .author__ava
+                                +image ('works/ava2.jpg', 'Аватар автора', 'author__pic')
                             .author-name__container
-                                .author__name
-                                .author__desc
+                                .author__name Владимир Сабанцев
+                                .author__desc Преподаватель
                 .about__form
+                    .form__inputs
+                        .form__header.marked Связаться со мной
+                        input(type="text" placeholder="Имя").form__input
+                        input(type="text" placeholder="Email").form__input
+                        textarea(name="comment", cols="30", rows="10" placeholder="Ваше сообщение").form__textarea
+                    .form__buttons
+                        button(type='submit' value='Отправить').form__btn.btn__send Отправить
+                        button(type='reset' value='Очистить').form__btn.btn__reset Очистить
+
 

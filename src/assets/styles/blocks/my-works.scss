@@ -35,7 +35,7 @@
         display: block;
         width: 50%;
         height: 150px;
-        background-image: linear-gradient(to top right, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        background-image: linear-gradient(to top right, white 0%, white 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
         position: absolute;
         top: -150px;
     }
@@ -49,7 +49,7 @@
         display: block;
         width: 50%;
         height: 150px;
-        background-image: linear-gradient(to top left, white 0%, white 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        background-image: linear-gradient(to top left, white 0%, white 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
         position: absolute;
         top: -150px;
     }
@@ -96,6 +96,9 @@
     width: 200px;
     padding: 20px 15px;
     background-color: $aqua;
+    &:hover{
+        background-color: $aqua-deep;
+    }
     border-radius: 5px;
 }
 .link__container{
@@ -128,10 +131,8 @@
     width: 100%;
 }
 .slide__img{
-    width: 100%;
     height: 100%;
-    display: block;
-    
+    display: block;   
     
 }
 .slide__controls{
@@ -140,16 +141,29 @@
     display: flex;
     .slide__img{
         filter: contrast(50%);
+        width: 100%;
+        //height: auto;
+        text-align: center;
     }
 
 }
 .slide__down{
     width: 50%;
     position: relative;
+    &:hover{
+        .slide__img{
+            filter: contrast(30%);
+        }
+    }
 }
 .slide__up{
     width: 50%;
     position: relative;
+    &:hover{
+        .slide__img{
+            filter: contrast(30%);
+        }
+    }
    
 }
 .port-arrow__icon{
@@ -189,27 +203,38 @@
 }
 .about__content{
     width: 100%;
-    background: url('./assets/images/about/about-bg.png') center center / cover no-repeat;
+    background: url('./assets/images/about/about-bg.png') top center / cover no-repeat;
     
 }
-.about__conteiner{
+.about__container{
     display: flex;
     flex-direction: column;
     width: 780px;
     margin: auto;
+    padding-top: 75px;
 }
 .about__quotes{
     display: flex;
     justify-content: center;
-    margin-right: 20px;
+
 
 }
 .about__quote{
-    width: 50%;
+    width: 48%;
+    margin-right: 20px;
+    &:last-child{
+        margin-right: 0;
+    }
+    margin-bottom: 70px;
 }
 .quote__head{
     position: relative;
+    //content: '&#61709';
     height: 40px;
+    font-family: 'fontawsome';
+    font-size: 36px;
+    color: $text-grey-light;
+    margin-bottom: 30px;
 }
 .portfolio-header__icon{
     position: absolute;
@@ -219,8 +244,100 @@
     width: 36px;
     fill: gray;
 }
-.quote__text{}
-.quote__autor{}
-.author__ava{}
-.author-name__container{}
-.author__name{}
+.quote__text{
+    margin-bottom: 25px;
+}
+.quote__author{
+    display: flex;
+}
+.author__ava{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.author__pic{
+    width: 100%;
+
+}
+.author-name__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $aqua;
+}
+.author__name{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.author__desc{
+    font-weight: normal;
+}
+.about__form{
+    
+    //background-color: #fff;
+    //background-color: rgba(white, 0.5);
+    width: 60%;
+    margin: auto;
+    margin-bottom: 150px;
+    border: 1px solid black;
+    &::before{
+        display: block;
+        content: '';
+        background: url('./assets/images/about/about-bg.png') center center / no-repeat;
+        //background-size: auto;
+        //background-position: -590px -590px;
+        filter: blur(2px);
+    }
+    border-radius: 5px
+}
+.form__inputs{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;   
+    padding: 0px 20px;
+}
+
+.form__header{
+    font-family: 'bernier';
+    font-size: 30px;
+    padding: 30px 30px;
+    text-align: center;
+    margin: auto;
+}
+.form__input{
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+}
+.form__textarea{
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+}
+.form__buttons{
+    display: flex;
+    justify-content: center;
+}
+.form__btn{
+    display: block;
+    width: 50%;
+    padding-right: 2px;
+    padding: 15px 0;
+    background-color: $aqua-btn;
+    color: #fff;
+    &:hover{
+        background-color: $aqua-deep;
+    }
+}
+.btn__send{
+    border-right: 2px solid $aqua-lite;
+    border-radius: 0 0 0 5px;
+}
+.btn__reset{
+    border-radius: 0 0 5px 0;
+}
