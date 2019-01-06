@@ -1,0 +1,70 @@
+extends ../main.layout.pug
+
+block content
+    .wrapper
+        include ../common/header
+        .work__triangles
+            .triangle__left
+            .triangle__right
+        .work__header
+            +icon('works-header', 'works-header__icon')
+            .work__page-name
+                h1.marked Мои работы
+        .work__slider
+            .slider__left
+                .left_container
+                    .slide__name.marked
+                        h2 Сайт школы онлайн образования
+                    .slide__desc HTML, CSS, JAVASCRIPT
+                    a(href='#').slide__view-btn
+                        .link__container
+                            +icon('link', 'link__icon')
+                        .link__desc Посмотреть сайт
+                
+            .slider__right
+                .slide__disp
+                    +image('slider/slide-one.png', 'Слайд 1', 'slide__img')
+                .slide__controls
+                    a(href='#').slide__down
+                        +image('slider/slide-four.png', 'Слайд 4', 'slide__img')
+                        +icon('port-arrow-down', 'port-arrow__icon')
+                    a(href='#').slide__up
+                        +image('slider/slide-two.png', 'Слайд 2', 'slide__img')
+                        +icon('port-arrow-up', 'port-arrow__icon')
+        .about__header
+            +icon('about-header', 'about__icon')
+            .about__name.marked
+                h1 Что обо мне говорят
+        .about__content
+            .about__container
+                ul.about__quotes
+                    li.about__quote
+                        .quote__head &#61709
+                            
+                        .quote__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .quote__author
+                            .author__ava 
+                                +image ('works/ava1.jpg', 'Аватар автора', 'author__pic')
+                            .author-name__container
+                                .author__name Ковальчук Дмитрий
+                                .author__desc основатель Loftschool
+                    li.about__quote
+                        .quote__head &#61709
+                        .quote__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        .quote__author
+                            .author__ava
+                                +image ('works/ava2.jpg', 'Аватар автора', 'author__pic')
+                            .author-name__container
+                                .author__name Владимир Сабанцев
+                                .author__desc Преподаватель
+                .about__form
+                    .form__inputs
+                        .form__header.marked Связаться со мной
+                        input(type="text" placeholder="Имя").form__input
+                        input(type="text" placeholder="Email").form__input
+                        textarea(name="comment", cols="30", rows="10" placeholder="Ваше сообщение").form__textarea
+                    .form__buttons
+                        button(type='submit' value='Отправить').form__btn.btn__send Отправить
+                        button(type='reset' value='Очистить').form__btn.btn__reset Очистить
+
+

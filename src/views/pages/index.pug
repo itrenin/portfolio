@@ -1,6 +1,28 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('portfolio_header', 'hello-world__block')
-    .inlined-svg
+  //- .hello-world какойто текст
+  //-   +icon('portfolio_header', 'hello-world__block')
+  //-   .inlined-svg
+  //-   include ../common/footer
+  .wrapper
+    section.welcome
+      a.auth-button(href = "#") Авторизоваться
+      .welcome__person-container
+        .person__pic
+        .person__text
+          h2 Тренин Илья
+          p Личный сайт веб разработчика
+        ul.socials.person__socials
+          
+          each social in ['vk', 'github', 'in']
+            li.social__item
+              a(href='#').socials__link
+                +icon(social, 'welcome__social')
+        ul.person__btns.socials
+          each btn in ['Мои работы', 'Обо мне', 'Блог']
+            li.person__btn 
+              +page(btn)
+
+      include ../common/footer-welcome
+  
