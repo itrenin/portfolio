@@ -16,6 +16,19 @@
     border-radius: 5px;
     padding: 20px 30px;
     color: white;
+    @include phones{
+        right: 50%;
+        transform: translateX(-50%);
+    }
+    @include tablets{
+        right: 20px;
+        padding: 10px 20px;
+    }
+    @include laptop{
+        right: 20px;
+        padding: 10px 20px;
+    }
+
 
     &:hover{
         background-color: white;

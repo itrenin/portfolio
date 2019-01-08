@@ -26,6 +26,9 @@
         width: 50%;
         height: 150px;
         background-image: linear-gradient(to top left, $about-right 0%, $about-right 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        @include laptop{
+            background-image: linear-gradient(to top left, $slider 0%, $about-right 49.7%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+        }
         position: absolute;
         top: -150px;
     }
@@ -35,17 +38,31 @@
     display: flex;
     justify-content: space-between;
     background-color: $about-right;
-    
+
+    @include tablets{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
     
 }
 .about-me__left{
     width: 50%;
     display: flex;
+    
+    @include laptop{
+        flex-direction: column;
+    }
+    @include tablets{
+        width: 100%;
+    }
     background-color: $slider;
     
 }
 .about-me__right{
     width: 49%;
+    @include tablets{
+        width: 100%;
+    }
     
 }
 .about-me__header{
@@ -53,6 +70,11 @@
     font-family: 'bernier';
     font-size: 31px;
     width: 50%;
+    @include laptop{
+        width: 75%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
     text-align: center;
     position: relative;
     
@@ -61,6 +83,9 @@
     position: absolute;
     width: 100%;
     top: 5%;
+    @include laptop{
+        top: 50%;
+    }
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: .1;
@@ -68,6 +93,10 @@
 .about-me__desc{
     padding-top: 20px;
     width: 49%;
+    @include laptop{
+        width: 75%;
+        margin: auto;
+    }
     margin-right: 20px;
 }
 .about-me__person-pic{
@@ -78,6 +107,9 @@
     font-family: 'bernier';
     text-align: center;
     font-size: 25px;
+    margin-bottom: 45px;
+}
+.about-me__person-desc{
     margin-bottom: 45px;
 }
 
@@ -91,6 +123,11 @@
     font-size: 20px;
     margin-bottom: 20px;
     margin-right: 60px;
+    @include laptop{
+        padding-top: 50px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
     .centered{
         display: block;
         width: 200px;
@@ -99,34 +136,69 @@
 .about-me__skills-text{
     margin-right: 60px;
     margin-bottom: 60px;
+    @include laptop{
+        width: 75%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
 }
 .about-me__skills-list{
     margin-bottom: 70px;
+    @include laptop{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .skills__item{
+    width: 100%;
+    padding-left: 25px;
     h2{
         font-size: 25px;
+        text-align: left;
+        @include tablets{
+            text-align: center;
+        }
     }
     margin-bottom: 40px;
     &:last-child{
         margin-bottom: 0;
     }
-    
+    @include phones{
+        width: 85%;
+    }
+    @include tablets{
+        width: 85%;
+    }
 }
 .skill__list{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    @include tablets{
+        //justify-content: center;
+        justify-content: space-around;
+    }
+    width: 100%;
     
 }
 .skill_item{
     position: relative;
     display: block;
     margin-right: 40px;
+    @include laptop{
+        margin-right: 30px;
+    }
     &:last-child{
         margin-right: 0;
     }
     color: $aqua;
+    @include tablets{
+        margin-right: 0;
+        
+    }
 }
 .about-me__map{
     position: relative;
@@ -144,6 +216,15 @@
     background-color: rgba(#fff, .8);
     padding: 35px 20px 0 20px;
     border-radius: 5px;
+    @include phones{
+        width: 85%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+    }
+
 }
 .contacts__header{
     display: block;
@@ -151,6 +232,9 @@
     font-family: 'bernier';
     font-size: 20px;
     margin-bottom: 35px;
+    @include phones{
+        margin-bottom: 25px;
+    }
 }
 .contacts__list{
     display: flex;

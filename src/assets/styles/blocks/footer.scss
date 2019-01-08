@@ -1,9 +1,31 @@
 
 .footer-welcome{
+    display: flex;
+    justify-content: center;
     margin-bottom: 45px;
+    @include phones{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
+    @include laptop{
+        margin-bottom: 20px;
+    }
     color: white;
     
 }
+.footer-welcome__name{
+    margin-right: 5px;
+}
+.footer-welcome__separator{
+    margin-right: 5px;
+    @include phones{
+        display: none;
+    }
+}
+.footer-welcome__text{}
+
 .footer{
 
     width: 100%;
@@ -14,17 +36,34 @@
     border: 1px solid $grey-border;
     display: flex;
     justify-content: space-between;
-    padding: 20px 30px
+    padding: 20px 30px;
+    @include tablets{
+        flex-direction: column;
+        text-align: center;
+    }
     
 }
 .footer__nav{
     width: 50%;
+    @include tablets{
+        width: 100%;
+    }
 }
 .nav__footer{
     display: flex;
+    @include tablets{
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    @include phones{
+        justify-content: space-between;
+    }
 }
 .footer__btn {
     margin-right: 40px;
+    @include phones{
+        margin-right: 0px;
+    }
     &:last-child{
         margin-right: 0;
     }
@@ -36,8 +75,13 @@
 }
 .footer__socal{
     width: 50%;
+    
     display: flex;
     justify-content: flex-end;
+    @include tablets{
+        width: 100%;
+        justify-content: center;
+    }
 }
 .footer-social__item{
     border: 1px solid white;
@@ -59,7 +103,7 @@
 .footer-nav__social{
     fill: white;
     width: 20px;
-    height: 20px;
+    height: 19px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,10 +114,19 @@
     display: flex;
     justify-content: space-between;
     color: $text-grey-light;
-    padding: 20px 30px
+    padding: 20px 30px;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     
 }
 .footer__about{
     width: 590px;
+    @include tablets{
+        margin-bottom: 25px;
+    }
 }
-.footer__copy{}
+//.footer__copy{}

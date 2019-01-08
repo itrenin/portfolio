@@ -57,11 +57,21 @@
 .work__slider{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     background-color: $slider;
+    @include tablets{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
 }
 .slider__left{
     width: 50%;
+    @include tablets{
+        width: 100%;
+        order: 2;
+        margin-bottom: 60px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,10 +79,11 @@
 .left_container{
     width: 420px;
     margin: auto;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    //align-items: center;
     text-align: center;
 }
 .slide__name{
@@ -91,6 +102,7 @@
     margin-bottom: 40px;
 }
 .slide__view-btn{
+    align-self: center;
     display: flex;
     justify-content: center;
     width: 200px;
@@ -120,6 +132,11 @@
 }
 .slider__right{
     width: 50%;
+    @include tablets{
+        width: 100%;
+        order: 1;
+        margin-bottom: 50px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,17 +144,22 @@
     
 }
 .slide__disp{
-    height: 525px;
+    //height: 525px;
     width: 100%;
 }
 .slide__img{
-    height: 100%;
+    width: 100%;
     display: block;   
     
 }
 .slide__controls{
-    height: 225px;
-    width: 100%;
+    //height: 225px;
+    width: 50%;
+    @include tablets{
+        width: 100%;
+        order: 3;
+    }
+    align-self: right;
     display: flex;
     .slide__img{
         filter: contrast(50%);
@@ -210,22 +232,35 @@
     display: flex;
     flex-direction: column;
     width: 780px;
+    @include tablets{
+        width: 95%;
+        padding-top: 30px;
+    }
     margin: auto;
     padding-top: 75px;
 }
 .about__quotes{
     display: flex;
     justify-content: center;
+    @include phones{
+        flex-direction: column;
+    }
 
 
 }
 .about__quote{
     width: 48%;
     margin-right: 20px;
+    margin-bottom: 70px;
     &:last-child{
         margin-right: 0;
     }
-    margin-bottom: 70px;
+    @include phones{
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    
 }
 .quote__head{
     position: relative;
@@ -235,6 +270,10 @@
     font-size: 36px;
     color: $text-grey-light;
     margin-bottom: 30px;
+    @include phones{
+        text-align: center;
+    }
+
 }
 .portfolio-header__icon{
     position: absolute;
@@ -279,6 +318,9 @@
     //background-color: #fff;
     //background-color: rgba(white, 0.5);
     width: 60%;
+    @include phones{
+        width: 100%;
+    }
     margin: auto;
     margin-bottom: 150px;
     border: 1px solid black;

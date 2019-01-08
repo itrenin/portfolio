@@ -12,6 +12,25 @@ const $webpack = require("webpack-stream");
 const webpack = require("webpack");
 const del = require("del");
 
+// PXTOREM
+
+// const pxtorem = require('gulp-pxtorem');
+ 
+// const pxtoremOptions = {
+//     replace: false
+// };
+ 
+// const postcssOptions = {
+//     map: true  
+// };
+
+// PXTOREM TASK
+// gulp.task('css', function() {
+//   gulp.src('css/**/*.css')
+//       .pipe(pxtorem(pxtoremOptions, postcssOptions))
+//       .pipe($gp.dest('css'));
+// });
+
 // стили
 gulp.task("styles", () => {
   return gulp
