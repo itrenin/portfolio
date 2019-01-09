@@ -6,7 +6,8 @@ module.exports = {
     about: "./src/assets/scripts/about.js",
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",
-    blog: "./src/assets/scripts/blog.js"
+    blog: "./src/assets/scripts/blog.js",
+    parallax: "./src/assets/scripts/parallax-header.js"
   },
   output: {
     filename: "[name].bundle.js"
@@ -32,7 +33,7 @@ module.exports = {
         uglifyOptions: {
           warnings: false,
           compress: {
-            drop_console: true
+            drop_console: false
           }
         }
       })

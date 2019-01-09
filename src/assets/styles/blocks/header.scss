@@ -1,8 +1,19 @@
 .header{
     min-height: 100vh;
-    background: url('./assets/images/welcome/bg1800.jpg') center center / cover no-repeat;
+    //background: url('./assets/images/welcome/bg1800.jpg') center center / cover no-repeat;
     padding-top: 30px;
     position: relative;
+    overflow: hidden;
+}
+.header__bg-img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //width: 120%;
+    height: 150%;
+    //transition: .2s;
+
 }
 .nav-continer{
     width: 95%;
