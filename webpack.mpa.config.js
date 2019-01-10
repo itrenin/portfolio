@@ -8,7 +8,9 @@ module.exports = {
     works: "./src/assets/scripts/works.js",
     blog: "./src/assets/scripts/blog.js",
     parallax: "./src/assets/scripts/parallax-header.js",
-    parallaxWelcome: "./src/assets/scripts/parallax-welcome.js"
+    parallaxWelcome: "./src/assets/scripts/parallax-welcome.js",
+    hamburger: "./src/assets/scripts/hamburger.js",
+    skills: "./src/assets/scripts/skills.js"
   },
   output: {
     filename: "[name].bundle.js"

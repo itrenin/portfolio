@@ -17,7 +17,10 @@ body {
   min-height: 100%;
   position: relative;
 }
-
+.wrapper--blocked {
+  position: fixed;
+  overflow: hidden;
+}
 .container {
   margin: 0 auto;
   width: 95%;
@@ -108,8 +111,8 @@ a {
   stroke-dasharray: 251;
   stroke-dashoffset: 251;
   
-  animation: fill 100s linear infinite;
-  animation-play-state: paused;
+  // animation: fill 100s linear infinite;
+  // animation-play-state: paused;
   //animation-delay: -50s;
 }
 

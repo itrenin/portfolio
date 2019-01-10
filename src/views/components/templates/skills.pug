@@ -1,0 +1,24 @@
+script(type="text/x-template")#skills-list
+    ul.about-me__skills-list
+        li.skills__item(v-for = "skillsGroupObj in skills")
+            skills-row(
+                :skillsGroupObj = "skillsGroupObj"
+            )
+
+script(type="text/x-template")#skills-item
+    .skills__row
+        h2 {{skillsGroupObj.skillsGroup}}
+        ul.skill__list
+            li.skill_item(v-for = "(skillPercentage, skillTitle) in skillsGroupObj.skills")
+                skill(
+                    :skillPercentage = "skillPercentage"
+                    :skillTitle = "skillTitle"
+                )
+
+script(type="text/x-template")#skill
+    //-h3 1233321
+    +circle('{{skillPercentage}}', '{{skillTitle}}')
+    //- .skill__circle--test
+    //-      span {{skillTitle}}
+    //-      span {{skillPercentage}}
+                

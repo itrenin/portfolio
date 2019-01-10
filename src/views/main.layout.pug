@@ -13,12 +13,21 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
+        ul.header__fullscreen-menu
+          each menuItem in ['Мои работы', 'Блог', 'Обо мне', 'Авторизация']
+            li.fullscreen-menu__item
+              .marked
+                +page(menuItem)
         block content
 
       include ./common/footer.pug
+      include ./components/entry.pug
 
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
+    script(src='skills.bundle.js')
     script(src='parallax.bundle.js')
     
+    
     block scripts
+    script(src = 'hamburger.bundle.js')
