@@ -7,7 +7,8 @@ module.exports = {
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",
     blog: "./src/assets/scripts/blog.js",
-    parallax: "./src/assets/scripts/parallax-header.js"
+    parallax: "./src/assets/scripts/parallax-header.js",
+    parallaxWelcome: "./src/assets/scripts/parallax-welcome.js"
   },
   output: {
     filename: "[name].bundle.js"

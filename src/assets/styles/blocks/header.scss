@@ -30,6 +30,7 @@
     opacity: 0.5;
     height: 100%;
     width: 100%;
+    z-index: 1000;
     &:hover{
         opacity: 1;
     }
@@ -38,6 +39,8 @@
 .nav__hamburger{
     height: 100%;
     width: 35px;
+    z-index: 1000;
+    //cursor: pointer;
 }
 .humburger__icon{
     height: 100%;
