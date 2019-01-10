@@ -39,22 +39,17 @@
     right: 50px;
     border: 2px solid white;
     border-radius: 5px;
-    padding: 20px 30px;
+    padding: 10px 20px;
     color: white;
     @include phones{
         right: 50%;
         transform: translateX(-50%);
     }
-    @include tablets{
-        right: 20px;
-        padding: 10px 20px;
-    }
+    
     @include laptop{
         right: 20px;
-        padding: 10px 20px;
+        
     }
-
-
     &:hover{
         background-color: white;
         color: $aqua;
@@ -117,7 +112,7 @@
 .person__btn{
     flex-grow: 1;
     text-align: center;
-    padding: 20px 30px;
+    padding: 15px 20px;
     background-color: $aqua;
     opacity: 0.8;
     border-right: 2px, solid, $aqua-lite;
