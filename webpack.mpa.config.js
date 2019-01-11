@@ -10,7 +10,8 @@ module.exports = {
     parallax: "./src/assets/scripts/parallax-header.js",
     parallaxWelcome: "./src/assets/scripts/parallax-welcome.js",
     hamburger: "./src/assets/scripts/hamburger.js",
-    skills: "./src/assets/scripts/skills.js"
+    skills: "./src/assets/scripts/skills.js",
+    slider: "./src/assets/scripts/slider.js"
   },
   output: {
     filename: "[name].bundle.js"
