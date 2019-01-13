@@ -3,6 +3,7 @@ const env = process.env.NODE_ENV;
 
 module.exports = {
   entry: {
+    test: "./src/assets/scripts/test.js",
     about: "./src/assets/scripts/about.js",
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",

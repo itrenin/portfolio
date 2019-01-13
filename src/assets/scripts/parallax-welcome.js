@@ -9,7 +9,7 @@ const moveLayers = e=>{
     //console.log(initialX + " " + initialY);
     layers.forEach((layer, i) => {
         const divider = i / 100;
-        console.log(divider);
+        // console.log(divider);
         const positionX = initialX * divider;
         const positionY = initialY * divider;
         layer.style.transform =`translate(${positionX}px, ${positionY}px)`;

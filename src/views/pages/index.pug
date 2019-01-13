@@ -8,42 +8,45 @@ block content
   .wrapper
     section.welcome
       .welcome__parallax
-        .parallax__layer
-           +image('welcome/01.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/02.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/03.png', '', 'welcome__parallax-img')
-        //- .parallax__layer
-        //-    +image('welcome/04_clouds.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/05.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/06.png', '', 'welcome__parallax-img')
-        //- .parallax__layer
-        //-    +image('welcome/07_clouds.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/08.png', '', 'welcome__parallax-img')
-        .parallax__layer
-           +image('welcome/09.png', '', 'welcome__parallax-img')
-        //- .parallax__layer
-        //-    +image('welcome/10_clouds.png', '', 'welcome__parallax-img')
-      a.auth-button(href = "#") Авторизоваться
-      .welcome__person-container
-        .person__pic
-        .person__text
-          h2 Тренин Илья
-          p Личный сайт веб разработчика
-        ul.socials.person__socials
-          
-          each social in ['vk', 'github', 'in']
-            li.social__item
-              a(href='#').socials__link
-                +icon(social, 'welcome__social')
-        ul.person__btns.socials
-          each btn in ['Мои работы', 'Обо мне', 'Блог']
-            li.person__btn 
-              +page(btn)
+         .parallax__layer
+            +image('welcome/01.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/02.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/03.png', '', 'welcome__parallax-img')
+         //- .parallax__layer
+         //-     +image('welcome/04_clouds.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/05.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/06.png', '', 'welcome__parallax-img')
+         //- .parallax__layer
+         //-     +image('welcome/07_clouds.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/08.png', '', 'welcome__parallax-img')
+         .parallax__layer
+            +image('welcome/09.png', '', 'welcome__parallax-img')
+         //- .parallax__layer
+         //-    +image('welcome/10_clouds.png', '', 'welcome__parallax-img')
+      #auth-component
+      //- .welcome__card
+      //-   a.auth-button(href = "#") Авторизоваться
+      //-   .welcome__person-container
+      //-     .person__pic
+      //-     .person__text
+      //-       h2 Тренин Илья
+      //-       p Личный сайт веб разработчика
+      //-     ul.socials.person__socials
+            
+      //-       each social in ['vk', 'github', 'in']
+      //-         li.social__item
+      //-           a(href='#').socials__link
+      //-             +icon(social, 'welcome__social')
+      //-     ul.person__btns.socials
+      //-       each btn in ['Мои работы', 'Обо мне', 'Блог']
+      //-         li.person__btn 
+      //-           +page(btn)
 
       include ../common/footer-welcome
+      
   

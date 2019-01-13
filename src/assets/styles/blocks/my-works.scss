@@ -147,6 +147,7 @@
 .slide__disp{
     //height: 525px;
     width: 100%;
+    padding: 3% 0;
 }
 .slide__img{
     display: block;
@@ -157,6 +158,7 @@
 .slide__controls{
     //height: 225px;
     width: 50%;
+    
     @include tablets{
         width: 100%;
         order: 3;
@@ -174,6 +176,7 @@
 .slide__down{
     width: 50%;
     position: relative;
+    padding: 3% 0;
     background-color: rgba(grey, .3);
     &:hover{
         background-color: rgba(grey, .5);
@@ -186,7 +189,7 @@
 .slide__up{
     width: 50%;
     position: relative;
-    
+    padding: 3% 0;
     background-color: rgba(grey, .3);
     &:hover{
         background-color: rgba(grey, .5);

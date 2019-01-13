@@ -1,0 +1,75 @@
+script(type = "text/x-template")#auth-root
+    .welcome__card
+        //- transition (name = "fade")
+        //-     authBtn (@side-change = "handleChange" :activeSide = "activeSide" v-if = "activeSide === 'slideA'")
+        //- transition (name = "flip" mode = "out-in")
+        //-     component (:is = "activeSide" @side-change = "handleChange")
+        authBtn
+        sideA
+
+
+script(type = "text/x-template")#auth-btn       
+    a(href = "#" @click.prevent = "$emit('side-change')").auth-button Авторизоваться
+
+script(type = "text/x-template")#side-a
+    .welcome__person-container
+        .person__pic
+        .person__text
+            h2 Тренин Илья
+            p Личный сайт веб разработчика
+        ul.socials.person__socials
+            each social in ['vk', 'github', 'in']
+                li.social__item
+                    a(href='#').socials__link
+                        +icon(social, 'welcome__social')
+        ul.person__btns.socials
+            each btn in ['Мои работы', 'Обо мне', 'Блог']
+                li.person__btn 
+                    +page(btn)
+
+script(type = "text/x-template")#side-b
+    .welcome__person-container
+        form(action="").welcome__auth-form
+            .auth-form__container
+                .auth-form__header.marked
+                    h2 Авторизуйтесь
+                input(type="text")
+                input(type="text")
+                input(type="checkbox")
+                .auth-form__robot-question Вы точно не робот?
+                input(type="radio" name="robot")
+                input(type="radio" name="robot" cheked)
+                ul.person__btns.socials
+                    each btn in [['На главную', 'index.html'],['Войти', '#']]
+                        li.person__btn
+                            a(href = btn[1]).person__link #{btn[0]}
+    //- .welcome__person-container
+    //-     form.login#login(method='Post' action='')
+    //-       ul.login__sections
+    //-         li.login__block
+    //-           .login__title Авторизуйтесь
+    //-         li.login__block.login__block--input
+    //-           +icon(svgRoot + '#login', 'login')
+    //-           input.login__input#username(type="text" placeholder="Логин" name="username")
+    //-         li.login__block.login__block--input
+    //-           +icon(svgRoot + '#password', 'login')
+    //-           input.login__input#password(type="password" placeholder="Пароль" name="password")
+    //-         li.login__block
+    //-           input#isHuman(hidden type="checkbox", name="isHuman")
+    //-           label.login__checkbox.checkbox(for="isHuman")
+    //-             +icon(svgRoot + '#check', 'checkbox')
+    //-           span.login__checkbox-description Я человек
+    //-         li.login__block.login__block--radio
+    //-           .login__question Вы точно не робот?
+    //-           .login__answer
+    //-             .login__answer-section
+    //-               input#notRobot(hidden type="radio", name="isRobot" value="yes")
+    //-               label.login__radio(for="notRobot")
+    //-               span.login__radio-description Да
+    //-             .login__answer-section
+    //-               input#robot(hidden type="radio", name="isRobot" value="no" checked)
+    //-               label.login__radio(for="robot")
+    //-               span.login__radio-description Не уверен
+    //-       .login__buttons
+    //-         button.login__button#loginBack(type="reset") На главную
+    //-         button.login__button#loginSubmit(type="submit") Войти

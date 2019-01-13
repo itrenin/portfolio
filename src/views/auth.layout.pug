@@ -9,8 +9,9 @@ html(lang="en")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
   body
-    
+    include ./pages/preloader.pug
     block content
-
+    include ./components/entry.pug
+    script(src='test.bundle.js')
     script(src="auth.bundle.js")
     script(src= "parallaxWelcome.bundle.js")
