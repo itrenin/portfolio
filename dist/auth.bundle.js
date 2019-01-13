@@ -86,7 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-<<<<<<< HEAD
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -143,8 +142,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-=======
->>>>>>> gh-pages
 /***/ "./src/assets/scripts/auth.js":
 /*!************************************!*\
   !*** ./src/assets/scripts/auth.js ***!
@@ -153,11 +150,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-<<<<<<< HEAD
 eval("\n\nvar _vue = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n\nvar _vue2 = _interopRequireDefault(_vue);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log(\"auth module loaded\");\n\n\nvar authBtn = {\n    props: {\n        activeSide: String\n    },\n    template: \"#auth-btn\",\n    methods: {}\n};\nvar sideA = {\n    template: \"#side-a\"\n};\nvar sideB = {\n    template: \"#side-b\"\n};\nnew _vue2.default({\n    el: \"#auth-component\",\n    components: {\n        authBtn: authBtn, sideA: sideA, sideB: sideB\n    },\n    data: function data() {\n        return {\n            activeSide: \"sideB\"\n        };\n    },\n\n    methods: {\n        handleChange: function handleChange() {\n            this.activeSide = this.activeSide === \"sideA\" ? \"sideB\" : \"sideA\";\n        }\n    },\n    template: \"#auth-root\"\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvYXNzZXRzL3NjcmlwdHMvYXV0aC5qcz85ZWY0Il0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciLCJhdXRoQnRuIiwicHJvcHMiLCJhY3RpdmVTaWRlIiwiU3RyaW5nIiwidGVtcGxhdGUiLCJtZXRob2RzIiwic2lkZUEiLCJzaWRlQiIsIlZ1ZSIsImVsIiwiY29tcG9uZW50cyIsImRhdGEiLCJoYW5kbGVDaGFuZ2UiXSwibWFwcGluZ3MiOiI7O0FBQ0E7Ozs7OztBQURBQSxRQUFRQyxHQUFSLENBQVksb0JBQVo7OztBQUdBLElBQU1DLFVBQVU7QUFDWkMsV0FBTTtBQUNGQyxvQkFBWUM7QUFEVixLQURNO0FBSVpDLGNBQVUsV0FKRTtBQUtaQyxhQUFRO0FBTEksQ0FBaEI7QUFVQSxJQUFNQyxRQUFTO0FBQ1hGLGNBQVU7QUFEQyxDQUFmO0FBR0EsSUFBTUcsUUFBUztBQUNYSCxjQUFVO0FBREMsQ0FBZjtBQUdBLElBQUlJLGFBQUosQ0FBUTtBQUNKQyxRQUFJLGlCQURBO0FBRUpDLGdCQUFZO0FBQ1JWLHdCQURRLEVBQ0NNLFlBREQsRUFDUUM7QUFEUixLQUZSO0FBS0pJLFFBTEksa0JBS0U7QUFDRixlQUFNO0FBQ0ZULHdCQUFZO0FBRFYsU0FBTjtBQUdILEtBVEc7O0FBVUpHLGFBQVE7QUFDSk8sb0JBREksMEJBQ1U7QUFDVixpQkFBS1YsVUFBTCxHQUFrQixLQUFLQSxVQUFMLEtBQW9CLE9BQXBCLEdBQThCLE9BQTlCLEdBQXdDLE9BQTFEO0FBQ0g7QUFIRyxLQVZKO0FBZUpFLGNBQVU7QUFmTixDQUFSIiwiZmlsZSI6Ii4vc3JjL2Fzc2V0cy9zY3JpcHRzL2F1dGguanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZyhcImF1dGggbW9kdWxlIGxvYWRlZFwiKTtcclxuaW1wb3J0IFZ1ZSBmcm9tICd2dWUnO1xyXG5cclxuY29uc3QgYXV0aEJ0biA9IHtcclxuICAgIHByb3BzOntcclxuICAgICAgICBhY3RpdmVTaWRlOiBTdHJpbmdcclxuICAgIH0sXHJcbiAgICB0ZW1wbGF0ZTogXCIjYXV0aC1idG5cIixcclxuICAgIG1ldGhvZHM6e1xyXG4gICAgICAgIFxyXG4gICAgICAgIFxyXG4gICAgfVxyXG59XHJcbmNvbnN0IHNpZGVBICA9IHtcclxuICAgIHRlbXBsYXRlOiBcIiNzaWRlLWFcIlxyXG59XHJcbmNvbnN0IHNpZGVCICA9IHtcclxuICAgIHRlbXBsYXRlOiBcIiNzaWRlLWJcIlxyXG59XHJcbm5ldyBWdWUoe1xyXG4gICAgZWw6IFwiI2F1dGgtY29tcG9uZW50XCIsXHJcbiAgICBjb21wb25lbnRzOiB7XHJcbiAgICAgICAgYXV0aEJ0biwgc2lkZUEsIHNpZGVCXHJcbiAgICB9LFxyXG4gICAgZGF0YSgpe1xyXG4gICAgICAgIHJldHVybntcclxuICAgICAgICAgICAgYWN0aXZlU2lkZTogXCJzaWRlQlwiXHJcbiAgICAgICAgfTtcclxuICAgIH0sXHJcbiAgICBtZXRob2RzOntcclxuICAgICAgICBoYW5kbGVDaGFuZ2UoKXtcclxuICAgICAgICAgICAgdGhpcy5hY3RpdmVTaWRlID0gdGhpcy5hY3RpdmVTaWRlID09PSBcInNpZGVBXCIgPyBcInNpZGVCXCIgOiBcInNpZGVBXCI7XHJcbiAgICAgICAgfVxyXG4gICAgfSxcclxuICAgIHRlbXBsYXRlOiBcIiNhdXRoLXJvb3RcIlxyXG59KSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/assets/scripts/auth.js\n");
-=======
-eval("\n\nconsole.log(\"auth module loaded\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvYXNzZXRzL3NjcmlwdHMvYXV0aC5qcz85ZWY0Il0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciXSwibWFwcGluZ3MiOiI7O0FBQUFBLFFBQVFDLEdBQVIsQ0FBWSxvQkFBWiIsImZpbGUiOiIuL3NyYy9hc3NldHMvc2NyaXB0cy9hdXRoLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc29sZS5sb2coXCJhdXRoIG1vZHVsZSBsb2FkZWRcIik7Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/assets/scripts/auth.js\n");
->>>>>>> gh-pages
 
 /***/ })
 
