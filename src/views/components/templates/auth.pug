@@ -1,15 +1,21 @@
 script(type = "text/x-template")#auth-root
     .welcome__card
-        //- transition (name = "fade")
-        //-     authBtn (@side-change = "handleChange" :activeSide = "activeSide" v-if = "activeSide === 'slideA'")
-        //- transition (name = "flip" mode = "out-in")
-        //-     component (:is = "activeSide" @side-change = "handleChange")
-        authBtn
-        sideA
+        transition(name = "fade")
+            authBtn(
+                @side-change = "handleChange" 
+                :activeSide = "activeSide" 
+                v-if = "activeSide === 'sideA'"
+                )
+
+        transition(name = "flip" mode = "out-in")
+            component(:is = "activeSide" @side-change = "handleChange")
+        //- authBtn
+        //- sideA
 
 
-script(type = "text/x-template")#auth-btn       
-    a(href = "#" @click.prevent = "$emit('side-change')").auth-button Авторизоваться
+script(type = "text/x-template")#auth-btn
+    a(href = "#" @click.prevent = "clickHandle").auth-button Авторизоваться     
+    //- a(href = "#" @click.prevent = "$emit('side-change')").auth-button Авторизоваться
 
 script(type = "text/x-template")#side-a
     .welcome__person-container
@@ -33,16 +39,31 @@ script(type = "text/x-template")#side-b
             .auth-form__container
                 .auth-form__header.marked
                     h2 Авторизуйтесь
-                input(type="text")
-                input(type="text")
-                input(type="checkbox")
+                .auth-form__input
+                    .auth-form__input-icon-container
+                        .auth-form__input-icon &#61447
+                    input(type="text" placeholder="Логин").auth-form__input-field
+                .auth-form__input
+                    .auth-form__input-icon-container
+                        .auth-form__input-icon &#61572
+                    input(type="password" placeholder="Пароль").auth-form__input-field
+                .auth-form__is-human
+                    input(type="checkbox")
+                    span Я человек
                 .auth-form__robot-question Вы точно не робот?
-                input(type="radio" name="robot")
-                input(type="radio" name="robot" cheked)
-                ul.person__btns.socials
-                    each btn in [['На главную', 'index.html'],['Войти', '#']]
-                        li.person__btn
-                            a(href = btn[1]).person__link #{btn[0]}
+                .auth-form__radio-container
+                    input(type="radio" name="robot")
+                    .auth-form__robot-answer Да
+                    input(type="radio" name="robot" cheked)
+                    .auth-form__robot-answer Не уверен
+            ul.person__btns.socials
+                li.person__btn
+                    a(href = "#" @click.prevent = "clickHandle").person__link На главную
+                li.person__btn
+                    a(href = "#").person__link Войти
+                    //- each btn in [['На главную', '#'],['Войти', '#']]
+                    //-     li.person__btn
+                    //-         a(href = btn[1]).person__link #{btn[0]}
     //- .welcome__person-container
     //-     form.login#login(method='Post' action='')
     //-       ul.login__sections

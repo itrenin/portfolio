@@ -7,7 +7,9 @@ const authBtn = {
     },
     template: "#auth-btn",
     methods:{
-        
+        clickHandle(){
+            this.$emit('side-change');
+        }
         
     }
 }
@@ -15,7 +17,13 @@ const sideA  = {
     template: "#side-a"
 }
 const sideB  = {
-    template: "#side-b"
+    template: "#side-b",
+    methods:{
+        clickHandle(){
+            this.$emit('side-change');
+        }
+        
+    }
 }
 new Vue({
     el: "#auth-component",
@@ -24,7 +32,7 @@ new Vue({
     },
     data(){
         return{
-            activeSide: "sideB"
+            activeSide: "sideA"
         };
     },
     methods:{
