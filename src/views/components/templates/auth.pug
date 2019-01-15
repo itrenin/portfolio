@@ -1,16 +1,16 @@
 script(type = "text/x-template")#auth-root
-    .welcome__card
+    .welcome__card-container
         transition(name = "fade")
             authBtn(
                 @side-change = "handleChange" 
                 :activeSide = "activeSide" 
                 v-if = "activeSide === 'sideA'"
                 )
-
-        transition(name = "flip" mode = "out-in")
-            component(:is = "activeSide" @side-change = "handleChange")
-        //- authBtn
-        //- sideA
+        .welcome__card
+            transition(name = "flip" mode = "out-in")
+                component(:is = "activeSide" @side-change = "handleChange")
+            //- authBtn
+            //- sideA
 
 
 script(type = "text/x-template")#auth-btn
@@ -48,14 +48,23 @@ script(type = "text/x-template")#side-b
                         .auth-form__input-icon &#61572
                     input(type="password" placeholder="Пароль").auth-form__input-field
                 .auth-form__is-human
-                    input(type="checkbox")
-                    span Я человек
-                .auth-form__robot-question Вы точно не робот?
+                    .is-human__checkbox-container
+                        input(type="checkbox" name="isHuman")#isHuman.is-human__check
+                        label(for="isHuman") Я человек
+                            //- +icon('check','is-human_checkbox')
+                        
+                    //-span Я человек
+                .auth-form__robot-question 
+                    b Вы точно не робот?
                 .auth-form__radio-container
-                    input(type="radio" name="robot")
-                    .auth-form__robot-answer Да
-                    input(type="radio" name="robot" cheked)
-                    .auth-form__robot-answer Не уверен
+                    .radio-container
+                        input(type="radio" name="robot")#robot__radio--yes.robot__radio
+                        label(for="robot__radio--yes") Да
+                    //-.auth-form__robot-answer Да
+                    .radio-container
+                        input(type="radio" name="robot" cheked)#robot__radio--no.robot__radio
+                        label(for="robot__radio--no") Не уверен
+                    //-.auth-form__robot-answer Не уверен
             ul.person__btns.socials
                 li.person__btn
                     a(href = "#" @click.prevent = "clickHandle").person__link На главную

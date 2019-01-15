@@ -1,12 +1,14 @@
+.header{
+    margin-bottom: 70px;
+}
 .main-content{
-    padding-top: 70px;
     display: flex;
     position: relative;
     font-size: 14px;
 }
 
 .main-content__menu-row{
-    //position: fixed;
+    position: relative;
     min-width: 390px;
     flex-grow: 1;
     margin-right: 120px;
@@ -19,15 +21,33 @@
         display: none;
     }
 }
-.side-menu__list{
+.side-menu__nav{
+    position: relative;
     padding-left: 120px;
     flex-grow: 1;
     @include laptop{
         padding-left: 20px;
     }
 }
+.side-menu__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.side-menu__list--absolute{
+    position: absolute;
+    top: 0;
+    
+}
+.side-menu__list--fixed{
+    position: fixed;
+    top: 0;
+    width: 390px;    
+}
 .side-menu__item{
     display: block;
+    width: 70%;
+    
     padding: 20px 30px;
     &:hover{
         .side-menu__link{
