@@ -42,14 +42,14 @@ script(type = "text/x-template")#side-b
                 .auth-form__input
                     .auth-form__input-icon-container
                         .auth-form__input-icon &#61447
-                    input(type="text" placeholder="Логин").auth-form__input-field
+                    input(type="text" placeholder="Логин" required).auth-form__input-field
                 .auth-form__input
                     .auth-form__input-icon-container
                         .auth-form__input-icon &#61572
-                    input(type="password" placeholder="Пароль").auth-form__input-field
+                    input(type="password" placeholder="Пароль" required).auth-form__input-field
                 .auth-form__is-human
                     .is-human__checkbox-container
-                        input(type="checkbox" name="isHuman")#isHuman.is-human__check
+                        input(type="checkbox" name="isHuman" )#isHuman.is-human__check
                         label(for="isHuman") Я человек
                             //- +icon('check','is-human_checkbox')
                         
@@ -69,7 +69,8 @@ script(type = "text/x-template")#side-b
                 li.person__btn
                     a(href = "#" @click.prevent = "clickHandle").person__link На главную
                 li.person__btn
-                    a(href = "#").person__link Войти
+                    //-a(href = "#" type='submit').person__link Войти
+                    button(type='submit' value='Войти').btn_auth Войти
                     //- each btn in [['На главную', '#'],['Войти', '#']]
                     //-     li.person__btn
                     //-         a(href = btn[1]).person__link #{btn[0]}

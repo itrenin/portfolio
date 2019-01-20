@@ -12,6 +12,8 @@ mixin page(pageName)
     a(href='./about.html').person__link #{pageName}
   else if pageName == 'Мои работы'
     a(href='./my-works.html').person__link #{pageName}
+  else if pageName == 'Авторизация'
+    a(href='./index.html').person__link #{pageName}
   else
     a(href='#').person__link #{pageName}
 

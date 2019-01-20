@@ -60,12 +60,14 @@ block content
                                 .author-name__container
                                     .author__name Владимир Сабанцев
                                     .author__desc Преподаватель
-                    .about__form
+                    
+                    form().about__form 
+                        .about__form-background                       
                         .form__inputs
                             .form__header.marked Связаться со мной
-                            input(type="text" placeholder="Имя").form__input
-                            input(type="text" placeholder="Email").form__input
-                            textarea(name="comment", cols="30", rows="10" placeholder="Ваше сообщение").form__textarea
+                            input(type="text" placeholder="Имя" required).form__input
+                            input(type="text" placeholder="Email" required).form__input
+                            textarea(name="comment", cols="30", rows="10" placeholder="Ваше сообщение" required).form__textarea
                         .form__buttons
                             button(type='submit' value='Отправить').form__btn.btn__send Отправить
                             button(type='reset' value='Очистить').form__btn.btn__reset Очистить
