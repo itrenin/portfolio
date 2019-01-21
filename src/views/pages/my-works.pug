@@ -40,6 +40,8 @@ block content
                     h1 Что обо мне говорят
             .about__content
                 .about__container
+                    .about__comments-bg
+                        +image('about/about-bg.png', '', 'about__img-bg')
                     ul.about__quotes
                         li.about__quote
                             .quote__head &#61709
@@ -71,5 +73,5 @@ block content
                         .form__buttons
                             button(type='submit' value='Отправить').form__btn.btn__send Отправить
                             button(type='reset' value='Очистить').form__btn.btn__reset Очистить
-
+    script(src="calcBg.bundle.js")
 
