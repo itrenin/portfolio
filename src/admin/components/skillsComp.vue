@@ -50,7 +50,7 @@ export default {
       removeSkill: "skills/remove"
     }),
     addNewSkill(newSkill) {
-      this.addSkillAction(newSkill).then(response => {
+      this.addSkillAction(newSkill).then(() => {
         this.newSkill.title = ""
         this.newSkill.percents = ""
       })
