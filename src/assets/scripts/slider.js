@@ -1,5 +1,5 @@
 import Vue from "vue";
-
+import axios from "axios";
 const info = {
     template: "#slider-info",
     props: {
@@ -21,12 +21,21 @@ const buttons = {
     data() {
         return{
             prevBtnWorks:[],
-            nextBtnWorks:[]
+            nextBtnWorks:[],
+            src:[]
         }
     },
+    // watch:{
+    //    works(value){
+    //        this.works = value;
+    //    }
+    // },
     created() {
         this.prevBtnWorks = this.transformWorksArrForButton('prev');
         this.nextBtnWorks = this.transformWorksArrForButton('next');
+        this.src = this.works;
+        //console.log(this.works);
+
     },
     methods:{
         slide(direction){
@@ -70,10 +79,13 @@ new Vue({
         currentIndex(value){
             this.makeInfiniteSliding(value);
         }
+
     },
     created () {
-        this.works = require('../../data/works.json');
-
+        // this.works = require('../../data/works.json');
+        axios
+            .get('https://webdev-api.loftschool.com/works/68')
+            .then(response =>(this.works = response.data));
     },
     
     methods:{

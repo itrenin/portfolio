@@ -29,11 +29,15 @@ export default {
             localStorage.setItem("token", token);
             appRequests.defaults.headers["Authorization"] = `Bearer ${token}`;
             this.authorize();
+            this.user.name = "";
+            this.user.password = "";
           }
         },
+        
         error => {
           console.error(error);
         }
+        
       );
     }
   }

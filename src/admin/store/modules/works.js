@@ -37,7 +37,7 @@ const works = {
       });
     },
     fetch({ commit }) {
-      this.$axios.get("/works/1").then(response => {
+      this.$axios.get("/works/68").then(response => {
         commit("fillUpWorks", response.data);
       });
     }

@@ -10,8 +10,14 @@ const skills = {
       (state.skills = state.skills.filter(
         skill => skill.id !== skillToRemoveId
       )),
-    // editSkill: (state, skillToEditId) => 
-    // ()
+    //  editSkill: (state, skillToEditId) => 
+    //  (state.skills = state.skills.map(skill => {
+    //     return skill.id === skillToEditId.id ? skillToEditId : skill;
+    //   })
+    //  )
+    // (state.skills = state.skills.filter(
+    //   skill => skill.id !== skillToRemoveId
+    // ))
   },
 
   actions: {
@@ -35,9 +41,27 @@ const skills = {
         commit('removeSkill', skillId)
       });
     },
-    // edit({ commit }, skillId) {
+    //  edit({ commit }, skills) {
+    //   const formData = new FormData();
 
-    // }
+    //   Object.keys(skills).forEach(key => {
+    //     const value = skills[key];
+    //     formData.append(key, value);
+    //   });
+
+    //   this.$axios.post(`/skills/${skills.id}`, formData).then(response => {
+    //     commit("editSkill", response.data.skills);
+    //   });
+    //  }
+    // edit() {
+    //   this.$axios.post(`/skills/${this.skill.id}`, {
+    //     params:{
+    //       title: this.skill.title,
+    //       percents: this.skill.percents,
+    //       category: this.skill.category
+    //     }
+    //   });
+    //  }
   }
 };
 
