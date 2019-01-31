@@ -25,15 +25,22 @@ const buttons = {
             src:[]
         }
     },
-    // watch:{
+    watch:{
+        works: function(val){
+            this.prevBtnWorks = this.transformWorksArrForButton('prev');
+            this.nextBtnWorks = this.transformWorksArrForButton('next');
+            this.src = val;
+        }
     //    works(value){
-    //        this.works = value;
-    //    }
-    // },
-    created() {
-        this.prevBtnWorks = this.transformWorksArrForButton('prev');
-        this.nextBtnWorks = this.transformWorksArrForButton('next');
-        this.src = this.works;
+    //     this.prevBtnWorks = this.transformWorksArrForButton('prev');
+    //     this.nextBtnWorks = this.transformWorksArrForButton('next');
+    //    },
+    
+    // },created()
+    // mounted() {
+    //     this.prevBtnWorks = this.transformWorksArrForButton('prev');
+    //     this.nextBtnWorks = this.transformWorksArrForButton('next');
+    //     this.src = this.works;
         //console.log(this.works);
 
     },
@@ -82,7 +89,7 @@ new Vue({
 
     },
     created () {
-        // this.works = require('../../data/works.json');
+        //this.works = require('../../data/works.json');
         axios
             .get('https://webdev-api.loftschool.com/works/68')
             .then(response =>(this.works = response.data));
