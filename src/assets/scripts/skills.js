@@ -27,7 +27,8 @@ const skill = {
 const skillsRow = {
     template: "#skills-item",
     props:{
-        skillsGroupObj: Object
+        skillsGroupObj: Object,
+        skillsObj: Object
     },
     components: {
         skill
@@ -41,17 +42,31 @@ new Vue({
     },
     data () {
         return {
-            skills:{
-            }
+            skills:{},
+            skillsCategory:[]
         }
     },
+    created(){
+        this.skillsCategory = [
+            {   
+                "id": 0,
+                "skillsGroup": "Frontend",
+            },
+            {   
+                "id": 1,
+                "skillsGroup": "Backend",
+            },
+            {   
+                "id": 2,
+                "skillsGroup": "Workflow"
+            }
+        ]
+           
+    },
     mounted() {
-        //this.skills = require('../../data/skills.json');
-        //let skillsObj = [];
         axios
             .get('https://webdev-api.loftschool.com/skills/68')
             .then(response =>(this.skills = response.data));
-        //let skillsComp =[];
         console.log(this.skills);
 
     },    

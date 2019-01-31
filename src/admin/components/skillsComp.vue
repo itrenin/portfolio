@@ -52,7 +52,6 @@ export default {
     ...mapActions({
       addSkillAction: "skills/add",
       removeSkill: "skills/remove",
-      //editSkill: "skills/edit"
     }),
     addNewSkill(newSkill) {
       this.addSkillAction(newSkill).then(() => {
@@ -62,17 +61,6 @@ export default {
     },
     
     editSkill(){
-      // console.log(this.skill);
-      // console.log(this.skill.percents);
-      // let editedSkill = {
-      //   title: "",
-      //   percents: 0,
-      //   category: 0
-      // }
-      // editedSkill.title = this.skill.title;
-      // editedSkill.percents = this.skill.percents;
-      // editedSkill.category = this.skill.category;
-      // console.log(editedSkill);
       axios.post(`/skills/${this.skill.id}`, {
           title: this.skill.title,
           percents: parseInt(this.skill.percents),

@@ -1,18 +1,21 @@
 script(type="text/x-template")#skills-list
     ul.about-me__skills-list
-        li.skills__item(v-for = "skillsGroupObj in skills")
+        li.skills__item(v-for = "skillsGroupObj in skillsCategory")
             skills-row(
                 :skillsGroupObj = "skillsGroupObj"
+                :skillsObj = "skills"
             )
 
 script(type="text/x-template")#skills-item
     .skills__row
         h2 {{skillsGroupObj.skillsGroup}}
         ul.skill__list
-            li.skill_item(v-for = "(skillPercentage, skillTitle) in skillsGroupObj.skills")
+            //- li.skill_item(v-for = "(skillPercentage, skillTitle) in skillsObj")
+            li.skill_item(v-for = "item in skillsObj"
+            v-if = "item.category === skillsGroupObj.id")
                 skill(
-                    :skillPercentage = "skillPercentage"
-                    :skillTitle = "skillTitle"
+                    :skillPercentage = "item.percents"
+                    :skillTitle = "item.title"
                 )
 
 script(type="text/x-template")#skill
