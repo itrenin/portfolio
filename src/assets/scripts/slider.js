@@ -26,22 +26,11 @@ const buttons = {
         }
     },
     watch:{
-        works: function(val){
+        works: function(){
             this.prevBtnWorks = this.transformWorksArrForButton('prev');
-            this.nextBtnWorks = this.transformWorksArrForButton('next');
-            this.src = val;
+            this.nextBtnWorks = this.transformWorksArrForButton('next');            
         }
-    //    works(value){
-    //     this.prevBtnWorks = this.transformWorksArrForButton('prev');
-    //     this.nextBtnWorks = this.transformWorksArrForButton('next');
-    //    },
-    
-    // },created()
-    // mounted() {
-    //     this.prevBtnWorks = this.transformWorksArrForButton('prev');
-    //     this.nextBtnWorks = this.transformWorksArrForButton('next');
-    //     this.src = this.works;
-        //console.log(this.works);
+
 
     },
     methods:{

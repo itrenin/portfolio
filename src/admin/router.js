@@ -8,6 +8,7 @@ Vue.use(VueRouter);
 import skills from "./components/skills.vue";
 import works from "./components/works.vue";
 import login from "./components/login.vue";
+import blog from "./components/blog.vue";
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
   {
     path: "/works",
     component: works
+  },
+  {
+    path: "/blog",
+    component: blog
   }
 ];
 

@@ -1,0 +1,30 @@
+script(type = "text/x-template")#blog-root
+    .main-content
+        blogMenu(:posts = "posts")
+        blogContent(:contentPosts = "posts")
+
+script(type = "text/x-template")#blog-menu
+    .main-content__menu-row
+        ul.side-menu__list
+            blogMenuItem(
+                v-for = "post in posts"
+                :post = "post"
+                )
+            
+script(type = "text/x-template")#blog-menu-item
+    li.side-menu__item
+        a(href='#' :data-name="`${post.title}`").side-menu__link {{post.title}}
+
+script(type = "text/x-template")#blog-content
+    .main-content__content-row
+        ul.main-content__list
+            blogContentItem(
+                v-for = "contentPost in contentPosts"
+                :contentPost = "contentPost"
+            )
+
+script(type = "text/x-template")#blog-content-item
+    li(:data-name="`${contentPost.title}`").main-content__item
+        h1 {{contentPost.title}}
+        time {{postDate}}
+        p {{contentPost.content}}
